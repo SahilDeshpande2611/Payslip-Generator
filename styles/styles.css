@@ -1,0 +1,188 @@
+body {
+  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f3f4f674 ;
+  margin: 20px;
+  padding: 0;
+}
+
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.form-header{
+  display: flex;
+  flex-direction: row;
+}
+.left-column {
+  flex: 1;
+  text-align: left;
+}
+.right-column {
+  flex: 2;
+  text-align: right;
+  
+}
+
+
+h1, h2, h3 {
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+ 
+}
+
+#employee-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.form-group {
+  flex: 1 1 calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#add-row-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.IncomeDetails{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.Income Details > div {
+  min-width: 300px; 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.totals {
+  margin-top: 20px;
+}
+
+.totals strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.net-payable-container {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.net-payable-container h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.net-payable-amount {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+  margin: 10px 0;
+}
+
+.net-payable-note {
+  font-size: 14px;
+  color: #555;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #555;
+}
+input, textarea {
+  width: 80%;
+  padding: 6px 2px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+input:focus , textarea:focus {
+  border: 2px solid #29507a;
+  margin-bottom: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.generate-pdf-btn {
+  background-color: #e10f1d;
+  color: #fff;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.reset-btn{
+  background-color: #5d44ee;
+  color: #fff;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .IncomeDetails {
+      flex-direction: column; /* Stack tables vertically on smaller screens */
+  }
+  input, textarea {
+    width: 85%;
+    font-size: 10px;
+  }
+
+}
