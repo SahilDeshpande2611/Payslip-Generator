@@ -3,23 +3,7 @@ const employeeSummary = document.getElementById('employee-summary');
 const imageInput = document.getElementById('image');
 const previewImage = document.getElementById('previewImage');
 
-// imageInput.addEventListener('change', function(event) {
-//   const file = event.target.files[0];
-//   if (file) {
-//     const reader = new FileReader();
-
-//     reader.onload = function(e) {
-//       previewImage.src = e.target.result;
-//       previewImage.style.display = 'block';
-//     };
-
-//     reader.readAsDataURL(file);
-//   } else {
-//     previewImage.src = '';
-//     previewImage.style.display = 'none';
-//   }
-// });
-
+// Display the selected image in the preview element
 function displayImage(event) {
   const file = event.target.files[0]; // Get the selected file
   if (file) {
@@ -177,15 +161,19 @@ function validateForm() {
 }
 
 // Generate PDF with validation
+// Generate PDF with validation
 document.getElementById('generate-pdf-btn').addEventListener('click', () => {
     if (validateForm()) {
         const { jsPDF } = window.jspdf;
         const pdf = new jsPDF();
         const container = document.getElementById('container');
 
-        // Hide all buttons
+        // Hide all buttons and add-row spans
         const buttons = document.querySelectorAll('button');
+        const addRowSpans = document.querySelectorAll('.add-btn');
+
         buttons.forEach(button => button.style.display = 'none');
+        addRowSpans.forEach(span => span.style.display = 'none');
 
         // Use html2canvas to capture the full content of the container
         html2canvas(container, { scale: 2 }).then(canvas => {
@@ -211,11 +199,13 @@ document.getElementById('generate-pdf-btn').addEventListener('click', () => {
 
             pdf.save('Payslip.pdf');
 
-            // Restore all buttons after generating the PDF
+            // Restore all buttons and add-row spans after generating the PDF
             buttons.forEach(button => button.style.display = '');
+            addRowSpans.forEach(span => span.style.display = '');
         });
     }
 });
+
 
 // Reset form validation styles on reset
 function resetForm() {
