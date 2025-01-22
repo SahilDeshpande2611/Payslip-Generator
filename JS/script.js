@@ -161,7 +161,6 @@ function validateForm() {
 }
 
 // Generate PDF with validation
-// Generate PDF with validation
 document.getElementById('generate-pdf-btn').addEventListener('click', () => {
     if (validateForm()) {
         const { jsPDF } = window.jspdf;
