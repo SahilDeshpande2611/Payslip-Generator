@@ -104,3 +104,8 @@ This tool is designed for modern web browsers such as Chrome, Firefox, Edge, and
 ## Contributing  
 
 Contributions are welcome! Fork the repository and submit pull requests to propose new features or fixes.  
+
+### Connect :
+- **LinkedIn**: [Connect with me professionally](https://in.linkedin.com/in/sahilsdeshpande)
+
+Thank you for your support, and I look forward to connecting with you!
